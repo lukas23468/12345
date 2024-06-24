@@ -1,0 +1,47 @@
+<html>
+<head>
+  <script>
+  function get(r) {//自訂函式
+   return document.getElementById(r);
+  }
+  function getRnd(min,max) {
+  return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  function gameStart() {
+   get("btnStart").style.display="block";
+   min=0 max=100;
+   ans=getRnd(min,max)
+   get("min").innerHTML=min;
+   get("max").innerHTML=max;
+   get("user").min=min;
+   get("user").max=max;
+  get("game").style.display="block";
+  }
+  function guess() {
+    user=parseInt(get("user").value);
+    if(user==ans){
+      alert("哈哈");
+      get("game").style.display="none";
+      get("btnStart").style.display="block";
+    }else if (user < ans)
+      get("min").innerHTML=min;
+      get("user").min=user;
+      get("user").value="";
+    }else if (user > ans) {
+      get("max").innerHTML=max;
+      get("user").max=user;
+      get("user").value="";
+  </script>
+
+
+</head>
+<body>
+ <button id="btnStart" onclick="gameStart">請投幣</button>
+ <div id="game" style="display:none;">
+  <span id="min">0</span> &lt; <input type="number" max=100 min=0> &lt;
+  <span id="max">100</span> <button onclick="guess();">確定</button>
+</div>
+</body>
+</html>
+
+

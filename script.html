@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <style>
+  #msg{
+  font-size:48pt;
+  color:blue;
+  }
+  </style>
+  <script>/*javascript
+  多行註解*/ //單行
+
+  function sayhello(){
+    //alert("你好");
+  //ans=prompt("你是誰")
+  ans=confirm("確定嗎")
+
+   console.log(ans);
+
+ // elm=document.getElementById("msg");
+  //elm.innerHTML="你好";
+  }
+
+
+
+
+  </script>
+  </head>
+  <body>
+  <button onclick="sayhello();">哈囉</button>
+  <div id="msg"></div>
+    <input type="text" placeholder="輸入帳號" maxlength=8><br>
+    <input type="password" placeholder="輸入密碼"><br>
+    <input type="number" placeholder="輸入數字" max=100 min=1 ><br>
+
+    <input type="range" max=100 min=10><br>
+    <input type="date" max="2024-04-31" min="2024-03-15"><br>
+    <input type="datetime-local" value="2024-03-25 08:36"><br>
+    <input type="color" value="#DD1111"><br>
+    <input type="filr"><br>
+    <input type="number" id="a1" value="">+<input type="number" id="a2" value="">
+    function add(h,k){
+     x=parseFloat(get("a1").value);
+     y=parseFloat(get("a2").value);
+    <button onclick="add();">=</button> <input type="text" id="ans" readonly>
+  </body>
+</html>

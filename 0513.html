@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+  <script>
+    function get(id) {
+      return document.getElementById(id);
+    }
+    function playbgm() {
+      get("bgm").play;
+    }
+    function stopbgm() {
+      get("bgm").pause;
+    }
+
+
+  </script>
+
+<body>
+  <audio controls loop>
+    <source src="alarm.mp3">
+  </audio>
+<button onclick="playbgm();">播放</button>
+<button onclick="stopbgm();">停止</button>
+</body>
+</html>
